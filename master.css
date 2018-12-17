@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hide {
+    display: none;
+}
+
+body {
+    position: absolute;
+    background-color: whitesmoke;
+    ;
+}
+
+#topnav {
+
+    position: fixed;
+    width: 100%;
+    height: 130px;
+    margin: 0 0;
+    padding: 10px;
+    z-index: 50;
+}
+
+#topnav > ul {
+    padding: 0px 10px;
+    ;
+    position: relative;
+    display: flex;
+    width: 80%;
+    margin: 0px auto;
+    height: 100%;
+    border: 1px solid gray;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.6);
+    border-radius: 2px;
+    align-items: stretch;
+    justify-content: flex-end;
+    background-color: black;
+}
+
+#topnav > ul > li {
+    position: relative;
+    display: flex;
+    max-width: 110px;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 10px;
+    flex-grow: 0;
+    flex-basis: auto;
+    font-size: 1.3em;
+    font-family: "Helvetica";
+    letter-spacing: 1px;
+    color: white;
+    list-style: none;
+    transition: all 0.1s;
+    cursor: pointer;
+}
+
+#topnav > ul > li:hover {
+    //color: gray;
+}
+
+#topnav > ul > li::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    height: 2px;
+    background-color: ghostwhite;
+    bottom: 0px;
+    transition: all 0.4s;
+    opacity: 0;
+}
+
+#topnav > ul > li:hover::after {
+    opacity: 1;
+    bottom: 20px;
+}
+
+#topnav > ul > .empty {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Montserrat;
+    font-size: 1.4em;
+    text-decoration: underline;
+}
+
+img {
+    display: block;
+
+    height: 80%;
+    width: auto;
+    margin-left: 5px;
+    align-self: center;
+
+}
+
+.empty {
+    flex-grow: 1;
+}
+
+/*CONTAINER START*/
+.landing {
+    display: flex;
+    flex-flow: row;
+    width: 100vw;
+    height: 100vh;
+    flex-flow: row;
+
+}
+
+.landing > div {
+    text-align: Center;
+    width: auto;
+    padding: 200px 30px;
+    color: white;
+    flex-basis: 0;
+    flex-grow: 1;
+    font-size: 1.6em;
+    font-weight: 700;
+    font-family: Montserrat;
+    white-space: pre-line;
+    transition: all 0.5s;
+}
+
+.landing > div:hover {
+    flex-grow: 2.5;
+}
+
+.landing > div:first-child {
+    color: black;
+}
